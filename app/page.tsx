@@ -1,7 +1,10 @@
+import { Button } from '@/components/ui/button';
+
 export default function Home() {
   return (
-    <main>
-      <p className="font-bold text-xl p-4">Zain's Portfolio Projects</p>
+    <main className="p-4">
+      <p className="text-xl font-bold">Zain's Portfolio Projects</p>
+      <Button>Click Here</Button>
     </main>
   );
 }
