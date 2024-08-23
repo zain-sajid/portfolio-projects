@@ -1,4 +1,4 @@
-import { SearchDropdown } from '@/components/app/search-dropdown';
+import { SearchDropdown } from '@/components/search-dropdown/search-dropdown';
 
 export default function Page() {
   return (

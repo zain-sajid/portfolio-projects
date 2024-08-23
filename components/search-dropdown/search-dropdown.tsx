@@ -16,7 +16,7 @@ import {
   PopoverTrigger
 } from '@/components/ui/popover';
 import { Input } from '@/components/ui/input';
-import AnimeCard from '@/components/app/anime-card';
+import AnimeCard from '@/components/search-dropdown/anime-card';
 import { ScrollArea } from '@/components/ui/scroll-area';
 
 import { Loader } from 'lucide-react';
@@ -24,6 +24,7 @@ import { Loader } from 'lucide-react';
 export function SearchDropdown() {
   const [isOpen, setIsOpen] = useState(false);
   const [search, setSearch] = useState('');
+
   const [debouncedSearch] = useDebounce(search, 500);
 
   const {
@@ -68,7 +69,7 @@ export function SearchDropdown() {
           <div className="grid gap-4">
             {isLoading && (
               <div className="flex w-full justify-center">
-                <Loader className="animate-spin-slow h-4 w-4" />
+                <Loader className="h-4 w-4 animate-spin-slow" />
               </div>
             )}
 
