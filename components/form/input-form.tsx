@@ -23,8 +23,6 @@ export function InputForm() {
     message: ''
   });
 
-  console.log('state: ', state.message);
-
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
     defaultValues: {
@@ -33,7 +31,6 @@ export function InputForm() {
   });
 
   async function onSubmit(data: z.infer<typeof FormSchema>) {
-    console.log('client: ', data.brand);
     formAction(data);
   }
 
@@ -50,6 +47,7 @@ export function InputForm() {
                 <Input placeholder="shadcn" {...field} />
               </FormControl>
               <FormMessage />
+              {state.message && <p>{state.message}</p>}
             </FormItem>
           )}
         />

@@ -11,6 +11,13 @@ export async function createCar(
   prevState: FormState,
   data: z.infer<typeof FormSchema>
 ) {
-  console.log('server: ', data.brand);
+  const parsed = FormSchema.safeParse(data);
+
+  if (!parsed.success) {
+    return { message: 'Invalid data' };
+  }
+
+  console.log('server: ', parsed.data.brand);
+
   return { message: 'Car created successfully' };
 }
