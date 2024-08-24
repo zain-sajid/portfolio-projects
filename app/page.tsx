@@ -1,17 +1,18 @@
+import { AnimatedGridPatternDemo } from '@/components/app/animated-grid-pattern-demo';
+import { MagicCardDemo } from '@/components/app/magic-card-demo';
 import { ThemeToggle } from '@/components/app/theme-toggle';
-import Link from 'next/link';
 
 export default function Home() {
   return (
     <main className="p-4">
-      <p className="text-xl font-bold">Zain's Portfolio Projects</p>
-
-      <div className="mb-2 flex flex-col gap-2">
-        <Link href="/components">Components</Link>
-        <Link href="/form">Form</Link>
+      <div className="flex flex-col gap-4">
+        <AnimatedGridPatternDemo />
+        <MagicCardDemo />
       </div>
 
-      <ThemeToggle />
+      <div className="fixed bottom-4 right-4">
+        <ThemeToggle />
+      </div>
     </main>
   );
 }
