@@ -26,9 +26,8 @@ export function MagicCardDemo() {
       }
     >
       {sections.map((section, index) => (
-        <Link href={section.href} className='w-full'>
+        <Link key={index} href={section.href} className="w-full">
           <MagicCard
-            key={index}
             className="cursor-pointer flex-col items-center justify-center whitespace-nowrap text-2xl shadow-2xl"
             gradientColor={theme === 'dark' ? '#262626' : '#D9D9D955'}
           >
